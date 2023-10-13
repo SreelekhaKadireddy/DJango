@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def account(request):
-    return render(request,'account_details.html')
+    return render(request,'accounts/account_details.html')

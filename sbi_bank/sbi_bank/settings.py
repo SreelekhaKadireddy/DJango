@@ -15,10 +15,8 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMP_DIR = os.path.join(BASE_DIR, 'sbi_bank','templates')
-ADDITIONAL_TEMPLATE_1 = os.path.join(TEMP_DIR, 'accounts')
-ADDITIONAL_TEMPLATE_2 = os.path.join(TEMP_DIR, 'user')
-print(BASE_DIR)
+BASE_DIR_1=os.path.dirname(os.path.abspath(__file__))
+TEMP_DIR=os.path.join(BASE_DIR_1,'templates')
 print(TEMP_DIR)
 
 # Quick-start development settings - unsuitable for production
@@ -61,7 +59,7 @@ ROOT_URLCONF = 'sbi_bank.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMP_DIR, ADDITIONAL_TEMPLATE_1,ADDITIONAL_TEMPLATE_2],
+        'DIRS': [TEMP_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
